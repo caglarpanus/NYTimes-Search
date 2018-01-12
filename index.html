@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NYTimes API Search</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="background-color:rgb(51,122,183); color:white;">
+                <h1 class="text-center">
+                    <span class="glyphicon glyphicon-list"></span>
+                    New York Times Search
+                </h1>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-primary">
+                    <span class="glyphicon glyphicon-tasks"></span>
+                     Search Parameters 
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="usr">Search Term:</label>
+                        <input type="text" class="form-control" id="term">
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Number of Records to Retrieve:</label>
+                            <select class="form-control" id="number">
+                                <option value="1">1</option>
+                                <option value="5" selected>5</option>
+                                <option value="10">10</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <label for="usr">Start Year (Optional):</label>
+                            <input type="text" class="form-control" id="start">
+                    </div>
+                    <div class="form-group">
+                            <label for="usr">End Year (Optional):</label>
+                            <input type="text" class="form-control" id="end">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="search">
+                        <span class="glyphicon glyphicon-search"></span>
+                        Search
+                    </button>
+                    <button type="button" class="btn btn-primary" id="clear">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        Clear Results
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    Top Results
+                </div>
+                <div class="panel panel-body" id="results">
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
